@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 15:33:11 by cmakario          #+#    #+#             */
-/*   Updated: 2025/05/03 15:53:00 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/05/04 14:40:22 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,21 @@ public:
 	unsigned int shortestSpan() const;
 	unsigned int longestSpan() const;
 	
-	// void addNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end);
-	// or
-	// template <typename T>
-	// void addRange(Iterator begin, Iterator end);
+	//------------Getters??!!??--------------//
+	// Trying to make Span class act like a container technically i expose the iterators
+	std::vector<int>::iterator begin() { return _numbers.begin(); }
+	std::vector<int>::iterator end() { return _numbers.end(); }
+	
+	std::vector<int>::const_iterator begin() const { return _numbers.begin(); }
+	std::vector<int>::const_iterator end() const { return _numbers.end(); }
 
+	template <typename Iterator>
+	void addRange(Iterator begin, Iterator end);
 };
 
+# include "Span.tpp"
+
 #endif // !SPAN_HPP
+
+
+
