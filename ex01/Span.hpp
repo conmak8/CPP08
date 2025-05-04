@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 15:33:11 by cmakario          #+#    #+#             */
-/*   Updated: 2025/05/04 14:40:22 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/05/04 16:10:47 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,3 @@ public:
 # include "Span.tpp"
 
 #endif // !SPAN_HPP
-
-
-

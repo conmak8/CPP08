@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 13:28:51 by cmakario          #+#    #+#             */
-/*   Updated: 2025/05/04 14:52:22 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/05/04 16:09:53 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ void testTooFew() {
 	}
 }
 
-
 void testBigSpan() {
 	std::cout << "\033[4m🚀 Big Span Test (10000 elements)\033[0m\n";
 	Span bigSpan(10000);
@@ -66,7 +65,6 @@ void testBigSpan() {
 	std::cout << "Shortest Span: " << bigSpan.shortestSpan() << "\n";
 	std::cout << "Longest Span : " << bigSpan.longestSpan() << "\n";
 }
-
 
 void testOverfill() {
 	std::cout << "\033[4m🚫 Overfill Test\033[0m\n";

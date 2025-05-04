@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 15:53:16 by cmakario          #+#    #+#             */
-/*   Updated: 2025/05/04 13:37:41 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/05/04 16:06:47 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void Span::addNumber(int number)
 {
 	if(_numbers.size() >= _maxSize)
 		throw std::out_of_range("Span is full"); // ? what if runtime_error?
+		// throw std::runtime_error("Span is full"); // ? what if runtime_error?
 	_numbers.push_back(number);
 }
 
