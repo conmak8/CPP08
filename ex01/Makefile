@@ -3,9 +3,10 @@ CXX			=		c++
 FLAGS		=		-Wall -Werror -Wextra
 STANDARD	=		--std=c++17
 SRCS		=		main.cpp Span.cpp
+HEADERS		=		Span.hpp
 OBJS		=		$(SRCS:.cpp=.o)
 
-%.o:%.cpp
+%.o:%.cpp $(HEADERS)
 	$(CXX) $(FLAGS) $(STANDARD) -o $@ -c $<
 
 $(NAME):$(OBJS)
@@ -28,11 +29,10 @@ re: fclean all
 # CXX			=		c++
 # FLAGS		=		-Wall -Werror -Wextra
 # STANDARD	=		--std=c++17
-# SRCS		=		main.cpp span.cpp
-# HEADERS		=		span.hpp
+# SRCS		=		main.cpp Span.cpp
 # OBJS		=		$(SRCS:.cpp=.o)
-# %.o:%.cpp $(HEADERS)
-# 	$(CXX) $(FLAGS) $(STANDARD) -o $@ -c $<
+
+# %.o:%.cpp
 # 	$(CXX) $(FLAGS) $(STANDARD) -o $@ -c $<
 
 # $(NAME):$(OBJS)
@@ -49,3 +49,5 @@ re: fclean all
 # re: fclean all
 
 # .PHONY: re clean fclean all
+
+
