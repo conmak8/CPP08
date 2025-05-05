@@ -2,8 +2,8 @@ NAME		=		mutant
 CXX			=		c++
 FLAGS		=		-Wall -Werror -Wextra
 STANDARD	=		--std=c++17
-SRCS		=		
-HEADERS		=		
+SRCS		=		main.cpp
+HEADERS		=		MutantStack.hpp MutantStack.tpp
 OBJS		=		$(SRCS:.cpp=.o)
 
 %.o:%.cpp $(HEADERS)
