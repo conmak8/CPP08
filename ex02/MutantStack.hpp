@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 09:39:15 by cmakario          #+#    #+#             */
-/*   Updated: 2025/05/05 13:00:39 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/05/05 14:18:54 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,10 @@ public:
 	~MutantStack();										// Destructor
 	//------------Methods--------------//
 	//___Iterators Access__//
-	typedef typename std::stack<T>::container_type::iterator iterator;
-	typedef typename std::stack<T>::container_type::const_iterator const_iterator;
+	// typedef typename std::stack<T>::container_type::iterator iterator;
+	using iterator = typename std::stack<T>::container_type::iterator;
+	// typedef typename std::stack<T>::container_type::const_iterator const_iterator;
+	using const_iterator = typename std::stack<T>::container_type::const_iterator;
 
 	iterator begin();
 	const_iterator begin() const;
