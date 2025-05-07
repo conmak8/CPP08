@@ -6,59 +6,59 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 12:34:07 by cmakario          #+#    #+#             */
-/*   Updated: 2025/05/05 13:39:31 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/05/07 15:43:50 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MutantStack.hpp"
 
 
-template <typename T>
-MutantStack<T>::MutantStack() : std::stack<T>() {								// Default constructor
+template <typename T,typename Container>
+MutantStack<T, Container>::MutantStack() : std::stack<T, Container>() {								// Default constructor
 	std::cout << "MutantStack default constructor called ✅" << std::endl;
 }
 
-template <typename T>
-MutantStack<T>::MutantStack(const MutantStack<T>& src) : std::stack<T>(src) { 	// Copy constructor
+template <typename T,typename Container>
+MutantStack<T, Container>::MutantStack(const MutantStack<T, Container>& src) : std::stack<T, Container>(src) { 	// Copy constructor
 	std::cout << "MutantStack copy constructor called 🔄" << std::endl;
 }
 
-template <typename T>
-MutantStack<T>& MutantStack<T>::operator=(const MutantStack<T>& rhs) 			// Copy assignment operator
+template <typename T,typename Container>
+MutantStack<T, Container>& MutantStack<T, Container>::operator=(const MutantStack<T, Container>& rhs) 			// Copy assignment operator
 {
 	if (this != &rhs)
-		std::stack<T>::operator=(rhs);
+		std::stack<T, Container>::operator=(rhs);
 	std::cout << "MutantStack assignment operator called 📝" << std::endl;
 	return *this;
 }
 
-template <typename T>
-MutantStack<T>::~MutantStack() { 												// Destructor
+template <typename T,typename Container>
+MutantStack<T, Container>::~MutantStack() { 												// Destructor
 	std::cout << "MutantStack destructor called 💥" << std::endl;
 }
 
 
 
-template <typename T>
-typename MutantStack<T>::iterator MutantStack<T>::begin() 
+template <typename T,typename Container>
+typename MutantStack<T, Container>::iterator MutantStack<T, Container>::begin() 
 {
-	return std::stack<T>::c.begin(); 											// Access to the beginning of the stack
+	return std::stack<T, Container>::c.begin(); 											// Access to the beginning of the stack
 }
 
-template <typename T>
-typename MutantStack<T>::const_iterator MutantStack<T>::begin() const 
+template <typename T,typename Container>
+typename MutantStack<T, Container>::const_iterator MutantStack<T, Container>::begin() const 
 {
-	return std::stack<T>::c.begin(); 											// Access to the beginning of the stack
+	return std::stack<T, Container>::c.begin(); 											// Access to the beginning of the stack
 }
 
-template <typename T>
-typename MutantStack<T>::iterator MutantStack<T>::end() 
+template <typename T,typename Container>
+typename MutantStack<T, Container>::iterator MutantStack<T, Container>::end() 
 {
-	return std::stack<T>::c.end(); 												// Access to the end of the stack
+	return std::stack<T, Container>::c.end(); 												// Access to the end of the stack
 }
 
-template <typename T>
-typename MutantStack<T>::const_iterator MutantStack<T>::end() const 
+template <typename T,typename Container>
+typename MutantStack<T, Container>::const_iterator MutantStack<T, Container>::end() const 
 {
-	return std::stack<T>::c.end(); 												// Access to the end of the stack
+	return std::stack<T, Container>::c.end(); 												// Access to the end of the stack
 }
