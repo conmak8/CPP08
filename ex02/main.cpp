@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 13:04:21 by cmakario          #+#    #+#             */
-/*   Updated: 2025/05/05 18:30:39 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/05/07 15:46:21 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,11 +112,24 @@ void testStrings() {
 	pressEnter();
 }
 
+void chooseContainerType() {
+	separator();
+	std::cout << "📦 Choose underlyint container type\n";
+	MutantStack<int, std::vector<int>> vecStack;
+	vecStack.push(10);
+	vecStack.push(20);
+
+	for (auto it = vecStack.begin(); it != vecStack.end(); ++it)
+		std::cout << *it << std::endl;
+	pressEnter();
+}
+
 int main() {
 	cppSampeTest();
 	std::cout << "\nMy Tests:\n";
 	testIntegers();
 	testCharacters();
 	testStrings();
-	return (0);
+	chooseContainerType();
+	return 0;
 }
