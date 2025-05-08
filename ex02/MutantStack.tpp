@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 12:34:07 by cmakario          #+#    #+#             */
-/*   Updated: 2025/05/07 15:43:50 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/05/08 13:10:11 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ MutantStack<T, Container>::~MutantStack() { 												// Destructor
 	std::cout << "MutantStack destructor called 💥" << std::endl;
 }
 
-
+//------------------------------------------------------------------------------------------//
 
 template <typename T,typename Container>
 typename MutantStack<T, Container>::iterator MutantStack<T, Container>::begin() 

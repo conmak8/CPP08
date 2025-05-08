@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 09:39:15 by cmakario          #+#    #+#             */
-/*   Updated: 2025/05/07 15:34:30 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/05/08 13:41:03 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@
 template <typename T,typename Container = std::deque<T> >
 class MutantStack : public std::stack<T, Container>
 {
-public:
+// protected:
+// 	using std::stack<T, Container>::c; // Access to the container of the stack
+public:	
 	//------------OCF-----------------//
 	MutantStack();										// Default constructor
 	MutantStack(const MutantStack& src);				// Copy constructor
