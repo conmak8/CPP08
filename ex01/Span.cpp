@@ -6,18 +6,34 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 15:53:16 by cmakario          #+#    #+#             */
-/*   Updated: 2025/05/04 16:06:47 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/05/27 20:37:05 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 
 
-Span::Span() : _maxSize(0) {}
+// Span::Span() : _maxSize(0) {}
+Span::Span() : _maxSize(0), _numbers() {} ;
 
-Span::Span(unsigned int n) : _maxSize(n) {}
+// Span::Span(unsigned int n) : _maxSize(n) {}
+// Span(unsigned int n) : _maxSize(n), _numbers() {
+// 	_numbers.reserve(_maxSize);
+// };
+Span::Span(unsigned int n) : _maxSize(n), _numbers()
+{
+	_numbers.reserve(_maxSize);  // Reserve storage for exactly maxSize elements!
+}
 
-Span::Span(const Span& src) : _maxSize(src._maxSize), _numbers(src._numbers) {}
+
+// Span::Span(const Span& src) : _maxSize(src._maxSize), _numbers(src._numbers) {}
+// Span(const Span& src) : _maxSize(src._maxSize), _numbers(src._numbers) {
+// 	_numbers.reserve(_maxSize);
+// };
+Span::Span(const Span& src) : _maxSize(src._maxSize), _numbers(src._numbers)
+{
+	_numbers.reserve(_maxSize);
+}
 // Span::Span(const Span& src) = default;
 
 Span& Span::operator=(const Span& rhs)
