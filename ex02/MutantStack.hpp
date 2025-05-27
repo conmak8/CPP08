@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 09:39:15 by cmakario          #+#    #+#             */
-/*   Updated: 2025/05/08 13:41:03 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/05/27 20:09:23 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class MutantStack : public std::stack<T, Container>
 // protected:
 // 	using std::stack<T, Container>::c; // Access to the container of the stack
 public:	
+	using std::stack<T, Container>::stack;  // Inherit all constructors! !!!!!!!!!!! 
 	//------------OCF-----------------//
 	MutantStack();										// Default constructor
 	MutantStack(const MutantStack& src);				// Copy constructor

@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 13:04:21 by cmakario          #+#    #+#             */
-/*   Updated: 2025/05/07 15:46:21 by cmakario         ###   ########.fr       */
+/*   Updated: 2025/05/27 20:09:30 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,27 @@ void chooseContainerType() {
 	pressEnter();
 }
 
+void testDequeInit() {
+	separator();
+	std::cout << "\033[35m📦 MutantStack from initialized deque!\033[0m\n";
+
+	// Step 1: Create and fill a deque
+	std::deque<int> myDeque = {42, 17, 7, 99, -5};
+
+	// Step 2: Create a MutantStack with that deque as its underlying container
+	MutantStack<int, std::deque<int>> stackFromDeque(myDeque);
+
+	std::cout << "Contents (iterate): ";
+	for (MutantStack<int, std::deque<int>>::iterator it = stackFromDeque.begin(); it != stackFromDeque.end(); ++it)
+		std::cout << *it << " ";
+	std::cout << std::endl;
+
+	std::cout << "Top of stack: " << stackFromDeque.top() << std::endl;
+	std::cout << "Stack size: " << stackFromDeque.size() << std::endl;
+
+	pressEnter();
+}
+
 int main() {
 	cppSampeTest();
 	std::cout << "\nMy Tests:\n";
@@ -131,5 +152,6 @@ int main() {
 	testCharacters();
 	testStrings();
 	chooseContainerType();
+	testDequeInit();
 	return 0;
 }
